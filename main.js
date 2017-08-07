@@ -10,10 +10,20 @@ fetch('https://api.github.com/users/gingin77')
 
     // Get data fields
     response.json().then(function(data) {
-      console.log(data.name);
+      // console.log(data.name);
       let name = data.name;
+      let login = data.login;
+      let email = data.email;
+      let company = data.company;
+      let website = data.blog;
+      let story = data.bio;
+      let gravatar = data.avatar_url;
+
+
+
+
       console.log(name);
-      console.log(`Name: ${name}`);
+      // console.log(`Name: ${name}`);
 
 
 
@@ -22,20 +32,24 @@ fetch('https://api.github.com/users/gingin77')
 
 
       let markup = `
-        <h1> ${name}</h1>
-        <div class="the_basics">
-          <ul>
-            <li>Name: ${name}</li>
-            <li>Github URL ${githubname}</li>
-            <li>Email: ${email}</li>
-            <li>Company: ${company}</li>
-            <li>Website: ${website}</li>
-        </div>
-        <div class="the_story">
-
-        </div>
+          <h1>${name}</h1>
+          <div class="the_basics">
+            <h2>The Basics</h2>
+            <ul>
+              <li>Name: ${name}</li>
+              <li>Github URL ${login}</li>
+              <li>Email: ${email}</li>
+              <li>Company: ${company}</li>
+              <li>Website: ${website}</li>
+          </div>
+          <div class="the_story">
+            <h2>The Story</h2>
+            <p>${story}</p>
+          </div>
+          <div class="gravatar">
+            <img src="${gravatar}">
+          </div>
       `
-
       document.body.innerHTML = markup;
         });
       }

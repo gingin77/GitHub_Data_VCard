@@ -13,7 +13,7 @@ fetch('https://api.github.com/users/gingin77')
       // console.log(data.name);
       let name = data.name;
       let login = data.login;
-      let email = data.email;
+      // let email = data.email;
       let company = data.company;
       let website = data.blog;
       let story = data.bio;
@@ -26,29 +26,30 @@ fetch('https://api.github.com/users/gingin77')
       // console.log(`Name: ${name}`);
 
 
-
-
-
-
-
       let markup = `
-          <h1>${name}</h1>
-          <div class="the_basics">
-            <h2>The Basics</h2>
-            <ul>
-              <li>Name: ${name}</li>
-              <li>Github URL ${login}</li>
-              <li>Email: ${email}</li>
-              <li>Company: ${company}</li>
-              <li>Website: ${website}</li>
-          </div>
-          <div class="the_story">
-            <h2>The Story</h2>
-            <p>${story}</p>
-          </div>
-          <div class="gravatar">
-            <img src="${gravatar}">
-          </div>
+        <div class="wrapper">
+            <h1>${name}</h1>
+            <div class="content">
+                <div class="the_basics">
+                  <h2>The Basics</h2>
+                  <ul>
+                    <li>Name: ${name}</li>
+                    <li>Github URL: ${login}</li>
+                    <li>Email: ginniehench@gmail.com</li>
+                    <li>Company: ${company}</li>
+                    <li>Website: ${website}</li>
+                </div>
+                  <div class="the_story">
+                    <h2>The Story</h2>
+                    <p>${story}</p>
+                  </div>
+                  <div class="gravatar">
+                    <img src="${gravatar}">
+                  </div>
+            </div>
+        </div>
+        <footer></footer>
+
       `
       document.body.innerHTML = markup;
         });

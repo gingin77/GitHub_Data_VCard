@@ -1,0 +1,62 @@
+/*Font options taken from Google Fonts
+
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Slab', serif;
+  font-family: 'Lora', serif;
+  font-family: 'Crimson Text', serif;
+
+*/
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #E2D5CF;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #7E8A82;
+}
+
+.wrapper{
+  margin: auto;
+  width: 80% wv;
+}
+
+h1{
+  margin: auto;
+  text-align: center;
+  background-color: #AE4553;
+  /*color: #7E8A82;*/
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  margin: 0 2% 0 2%;
+}
+
+ul{
+  padding: 0px;
+}
+
+li{
+  list-style-type: none;
+}
+
+.the_story{
+  width: 40%;
+}
+
+img{
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+  object-fit: cover;
+  object-position: center right;
+}
+
+footer{
+  margin: auto;
+  height: 2vh;
+  background-color: #AE4553;
+}
